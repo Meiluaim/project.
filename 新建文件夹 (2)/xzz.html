@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	a{
+		text-decoration: none;
+		color: red;
+	}
+	ul li{
+		float: left;
+		list-style: none;
+	}
+	.img1{
+		position: absolute;
+		top: 0px;
+		width: 100%;
+		height: 230px;
+		left: 0px;
+	}
+	.head{
+		position: absolute;
+		top: 230px;
+		width: 100%;
+		left: 0px;
+		background: rgb(240, 228, 228);
+		height: 100px;
+		color: black;
+	}
+	.head ul li{
+		float: left;
+		width: 12%;
+		font-size: 20px;
+        line-height: 45px;
+	}
+    .head ul li a{
+        color: black;
+        display: block;
+    }
+	.head ul li a:hover{
+		color: red;
+	}
+
+    .body{
+        position: absolute;
+        top: 330px;
+        background-color: white;
+        width: 75%;
+        left: 12.5%;
+        height: 900px;
+    }
+    body{
+      margin: 0;
+      padding: 0;
+      background: white;
+    }
+    .slidershow{
+      width: 1000px;
+      height: 600px;
+      overflow: hidden;
+    }
+    .middle{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+    .navigation{
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+    }
+    .bar{
+      width: 50px;
+      height: 10px;
+      border: 2px solid #fff;
+      margin: 6px;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+    .bar:hover{
+      background: #fff;
+    }
+     
+    input[name="r"]{
+        position: absolute;
+        visibility: hidden;
+    }
+     
+    .slides{
+      width: 500%;
+      height: 100%;
+      display: flex;
+    }
+     
+    .slide{
+      width: 20%;
+      transition: 0.6s;
+    }
+    .slide img{
+      width: 100%;
+      height: 100%;
+    }
+     
+    #r1:checked ~ .s1{
+      margin-left: 0;
+    }
+    #r2:checked ~ .s1{
+      margin-left: -20%;
+    }
+    #r3:checked ~ .s1{
+      margin-left: -40%;
+    }
+    #r4:checked ~ .s1{
+      margin-left: -60%;
+    }
+    #r5:checked ~ .s1{
+      margin-left: -80%;
+    }
+
+    .word1{
+      position: absolute;
+      left: 18%;
+      top: 400px;
+      width: 64%;
+      height: 80px;
+      background-color: white;
+    }
+    .word1 ul li{
+      float: left;
+      width: 50%;
+      font-size: 18px;
+      text-align: center;
+      line-height: 40px;
+    }
+    .word1 ul li a{
+      color: black;
+    }
+    .word1 ul li a:hover{
+      color: red;
+    }
+
+.word2{
+  position: absolute;
+  top: 85%;
+
+  background-color: rgb(238, 229, 229);
+  width: 100%;
+  height: 15%;
+}
+.word2 ul li{
+  float: left;
+  width: 33%;
+  font-size: 15px;
+  text-align: center;
+  line-height: 45px;
+}
+.word2 ul li a{
+  color: black;
+}
+.word2 ul li a:hover{
+  color: red;
+}
+.a1{
+        position: absolute;
+        top: 1270px;
+        width: 75%;
+        left: 12.5%;
+        height: 900px;
+    }
+    .a2{
+        position: absolute;
+        top: 1520px;
+        width: 75%;
+        left: 12.5%;
+        height: 900px;
+    }
+    .a3{		
+        position: absolute;
+        top: 1790px;
+        width: 35%;
+        left: 12.5%;
+        color: rgb(255, 0, 0);
+    }
+    .a4{		
+        position: absolute;
+        top: 1790px;
+        left: 40%;
+        color: rgb(255, 0, 0);
+    }
+    .a5{		
+        position: absolute;
+        top: 2230px;
+        width: 21%;
+        left: 12.5%;
+        color: rgb(255, 0, 0);
+    }
+    .a6{		
+        position: absolute;
+        top: 2230px;
+        left: 40%;
+        color: rgb(255, 0, 0);
+    }
+    .a7{		
+        position: absolute;
+        top: 2230px;
+        left: 68%;
+        width: 20%;
+        color: rgb(255, 0, 0);
+    }
+    #az li a:hover{
+        background-color:#f54d4d;
+    }
+    .a8{		
+        position: absolute;
+        top: 1980px;
+        left: 68%;
+        color: rgb(255, 0, 0);
+    }
+    .a9{		
+        position: absolute;
+        top: 1780px;
+        left: 68%;
+        color: rgb(255, 0, 0);
+    }
+    .a10{		
+        position: absolute;
+        top: 1780px;
+        left: 77%;
+        color: rgb(255, 0, 0);
+    }
+    .a11{		
+        position: absolute;
+        top: 2680px;
+        width: 75%;
+        left: 12.5%;
+    }
+    .a12{		
+        position: absolute;
+        top: 3120px;
+        width: 35%;
+        left: 12.5%;
+    }
+    .a13{		
+        position: absolute;
+        top: 3120px;
+        width: 35%;
+        left: 51%;
+    }
+    .a14{		
+        position: absolute;
+        top: 4530px;
+        width:100%;
+
+        color: rgb(0, 0, 0);
+    }
+    .a15{		
+        position: absolute;
+        top: 3330px;
+        width:75%;
+        left :12.5%;
+        color: rgb(0, 0, 0);
+    }
+
+
+        a{text-decoration: none;color: rgb(254, 254, 254);}
+        ul li{list-style: none;}
+        .box{
+		position: absolute;
+		top: 2950px;
+		width: 98%;
+		left: 1%;
+		background: rgb(255, 255, 255);
+		height: 100px;
+		color: black;
+    	}
+	.box ul li{
+
+		width: 200px;
+		font-size: 20px;
+        line-height: 45px;
+	}
+    .box ul li a{
+        color: rgb(0, 0, 0);
+        display: block;
+    }
+	.box ul li a:hover{
+		color: rgb(0, 0, 0);
+	}
+    .box2 { 
+            background: rgb(214, 42, 42);
+            position: absolute;
+            display:none;
+            color: rgb(144, 4, 4);
+            width: 100px;
+        }
+       
+         .box  li:hover .box2{
+              display: block;
+                
+        } 
+        .box li :hover a{
+
+                color: rgb(0, 0, 0);
+        }
+
+
+
+
+
+
+
+
+.b {
+    width: calc(100%);
+    overflow: hidden;
+    margin-top: 3500px;
+    margin-left: 23%;
+}
+ 
+.b ul {
+    width: calc(100% * 4);
+    animation-name: am;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    top: 3500px;
+}
+ 
+.b ul li {
+    width: calc(100% / 4);
+    height: 500px;
+    float: left;
+    list-style: none;
+}
+ 
+.b ul li:nth-child(1)
+{
+    background-image: url(../images/01.jpg);
+}
+ 
+.b ul li:nth-child(2)
+{
+    background-image: url(../images/02.jpg);
+}
+ 
+.b ul li:nth-child(3)
+{
+    background-image: url(../images/03.jpg);
+}
+ 
+.b ul li:nth-child(4)
+{
+    background-image: url(../images/04.jpg);
+}
+ 
+@keyframes am {
+    0%, 15% {margin-left: 0;}
+    25%, 40% {margin-left: calc(100% * -1);}
+    50%, 65% {margin-left: calc(200% * -1);}
+    80%, 100% {margin-left: calc(300% * -1);}
+}
+
+.a18{		
+        position: absolute;
+        top: 4230px;
+        width:75%;
+        left :15.5%;
+        color: rgb(0, 0, 0);
+    }
+</style>
+</head>
+<body>
+	<map name="img-one">
+		<area shape="rect" coords="60,30,600,200" href="https://www.xuexi.cn/">
+	</map>
+	<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fyn.yunnan.cn%2Fpic%2F003%2F012%2F789%2F00301278919_3e6a830e.jpg&refer=http%3A%2F%2Fyn.yunnan.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1673072568&t=a6349d1c9a78ecbb73d5b0218d171e24" class="img1" usemap="#img-one">
+	<div class="head">
+	<ul>
+		<li>&nbsp</li>
+		<li><a href="#">国际</a></li>
+		<li><a href="#">学习电视台</a></li>
+   		<li><a href="#">学习电台</a></li>
+   		<li><a href="#">强军兴国</a></li>
+   		<li><a href="#">学习文化</a></li>
+   		<li><a href="#"><img src="https://tse1-mm.cn.bing.net/th/id/OIP-C.aUyF5WWe2zagYxvif0FhVQHaHa?w=171&h=180&c=7&r=0&o=5&pid=1.7" width="20px" height="20px">搜索</a>
+</ul>
+<h1>
+    报告
+<a href="C:\Users\Meiluaim\Desktop\新建文件夹 (2)\报告.docx">Link text</a>
+</h1>
+<ul>
+	<li>&nbsp</li>
+	<li>&nbsp</li>
+		<li><a href="#">思想</a></li>
+		<li><a href="#">习近平文汇</a></li>
+   		<li><a href="#">学习理论</a></li>
+   		<li><a href="#">红色中国</a></li>
+   		<li><a href="#">学习科学</a></li>
+   		<li><a href="#">用户登录</a><li>
+</ul>
+	</div>
+	<div class="body">
+         <h1 style=""><a href="#"><font color="red"><center>习近平出席首届中国－阿拉伯国家峰会并发表主旨讲话</center></font></a></h1>
+    <p>
+       <a href="#"><font color="black"><center>习近平在首届中国-阿拉伯国家峰会开幕式上的主旨讲话习近平提出中阿务实合作“八大共同行动”首届中阿峰会利雅得宣言</center></font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+       <a href="#">更多头条</a>
+    </p> 
+
+
+
+    <div class="slidershow middle">
+ 
+        <div class="slides">
+          <input type="radio" name="r" id="r1" checked>
+          <input type="radio" name="r" id="r2">
+          <input type="radio" name="r" id="r3">
+          <input type="radio" name="r" id="r4">
+          <input type="radio" name="r" id="r5">
+          <div class="slide s1">
+          <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=16593857375291726580&item_id=16593857375291726580"> <img src="https://boot-img.xuexi.cn/image/1004/process/fa6095de688f45e28a418d18b5677d41.jpg" alt=""></a> 
+          </div>
+          <div class="slide">
+           <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=13017678811309652283&item_id=13017678811309652283"><img src="https://boot-img.xuexi.cn/image/1004/process/6b640818c98340e4943c4b4c4e450443.jpg" alt=""></a> 
+          </div>
+          <div class="slide">
+           <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=12980629997064378295&item_id=12980629997064378295"><img src="https://boot-img.xuexi.cn/image/1004/process/1ea0eaa53958402e8febfd85924ca2cd.jpg" alt=""></a> 
+          </div>
+          <div class="slide">
+          <a href="https://www.xuexi.cn/fcfa179537ceda0bfbee9727591a102c/4ec8b5c5df17c32984741d967609a967.html"><img src="https://boot-img.xuexi.cn/image/1004/process/d22bafd84430496ca643faa52e19fc4b.jpg" alt=""></a>  
+          </div>
+          <div class="slide">
+           <a href="https://www.xuexi.cn/0809b8b6ab8a81a4f55ce9cbefa16eff/ae60b027cb83715fd0eeb7bb2527e88b.html" ><img src="https://boot-img.xuexi.cn/image/1004/process/63d49894811240ef8c65d264e0b7820b.jpg" alt=""></a>
+          </div>
+        </div>
+   
+        <div class="navigation">
+          <label for="r1" class="bar"></label>
+          <label for="r2" class="bar"></label>
+          <label for="r3" class="bar"></label>
+          <label for="r4" class="bar"></label>
+          <label for="r5" class="bar"></label>
+        </div>
+      </div>
+     <div class="word2">
+      <ul>
+        <li><a href="https://www.xuexi.cn/lgpage/detail/index.html?id=17511249906540131563&item_id=17511249906540131563" target="_blank">稳链强链提振工业经济</a></li>
+        <li><a href="https://www.xuexi.cn/lgpage/detail/index.html?id=7035577566262055508&item_id=7035577566262055508" target="_blank">做好民生防疫商品保供稳价</a></li>
+        <li><a href="https://www.xuexi.cn/lgpage/detail/index.html?id=8618613606873820270&item_id=8618613606873820270" target="_blank">稳链保供畅通物流“大动脉”</a></li>
+      </ul>
+      <ul>
+        <li><a href="https://www.xuexi.cn/lgpage/detail/index.html?id=5109525507023649037&item_id=5109525507023649037" target="_blank">河南南召：义诊活动暖民心</a></li>
+        <li><a href="https://www.xuexi.cn/lgpage/detail/index.html?id=10476932016997977678&item_id=10476932016997977678" target="_blank">河南泌阳：中国绳结</a></li>
+        <li><a href="https://www.xuexi.cn/lgpage/detail/index.html?id=14212869006639796660&item_id=14212869006639796660" target="_blank">安徽含山：“反诈”宣传进企业</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="https://www.xuexi.cn/xxqg.html?id=17m502ocin417m502ocin417m502ocin" target="_blank">论中国梦</a></li>
+        <li><a href="https://www.xuexi.cn/xxqg.html?id=17e8hpdbtn417e8hpdbtn417e8hpdbtn" target="_blank">论马克思</a></li>
+        <li><a href="https://www.xuexi.cn/xxqg.html?id=1gkjnuqps741gkjnuqps741gkjnuqps7" target="_blank">论坚定理想信念</a></li>
+      </ul>
+
+
+     </div>
+
+    </div>
+    <div class="word1">
+      <ul>
+        <li><a href="https://www.xuexi.cn/lgpage/detail/index.html?id=2439382751683285768&item_id=2439382751683285768" target="_blank">习近平提出中阿务实合作“八大共同行动”</a></li>
+        <li><a href="https://www.xuexi.cn/lgpage/detail/index.html?id=12980629997064378295&item_id=12980629997064378295" target="_blank">习近平会见阿尔及利亚总理阿卜杜拉赫曼</a></li>
+      </ul>
+      <ul>
+        <li><a href="https://www.xuexi.cn/lgpage/detail/index.html?id=4410354722561113418&item_id=4410354722561113418" target="_blank">习近平会见巴林国王哈马德</a></li>
+        <li><a href="https://www.xuexi.cn/lgpage/detail/index.html?id=5583547744193372055&item_id=5583547744193372055" target="_blank">公安部发布最新机动车和驾驶人数据</a></li>
+      </ul>
+    </div>  
+      <div class="a1">      
+        <map name="myMap">
+        <area shape="rect" coords="0,500,2000,0" href="https://www.zxx.edu.cn/" /> </map>
+        <img src="https://boot-img.xuexi.cn/lego/image/3735_g2cw5m5PE/2c936a79e1a0438eb9eafc367bbc39c0.jpg" usemap="#myMap" border="0" style="width:100%;height:200px;">
+    </div>
+
+    <div class="a2">
+        <map name="2myMap">
+        <area shape="rect" coords="0,500,2000,0" href="https://www.xuexi.cn/xxqg.html?id=4de7b8c009e74e6e9d6a134042cb3700" /> <map>
+        <img src="https://boot-img.xuexi.cn/lego/image/2981_efdc547bc/b8bef2d90f61464fb5a4cc1ced8567ab.jpg" usemap="#2myMap" border="0" style="width:100%;height:200px;">
+    </div>
+
+    <div class="a3">
+        <h1>重要新闻</h1>  
+        <hr size="1px" noshade="noshade" color="red"/><br>
+        <ul id="az"><li>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=350370349362446442&item_id=350370349362446442" target="_blank"style="color: black;">李克强同主要国际经济机构负责人举行第...</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=12847183406731998504&item_id=12847183406731998504" target="_blank"style="color: black;">栗战书主持召开十三届全国人大常委会第...</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=4574912108923087957&item_id=4574912108923087957" target="_blank"style="color: black;">汪洋主持全国政协双周协商座谈会</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=3771763750146466898&item_id=3771763750146466898" target="_blank"style="color: black;">韩正出席2022能源电力转型国际论坛并致辞</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=7488148730590529567&item_id=7488148730590529567" target="_blank"style="color: black;">民革第四十次全国代表大会开幕蔡奇致贺词</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=7488148730590529567&item_id=7488148730590529567" target="_blank"style="color: black;">王岐山在第四届外滩金融峰会开幕式上发表...</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=2057254462902976030&item_id=2057254462902976030" target="_blank"style="color: black;">王晨：深入学习贯彻党的二十大精神推动...</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=12805502913229111520&item_id=12805502913229111520" target="_blank"style="color: black;">孙春兰强调 扎实推动国际中文教育高质量...</a><br><br>
+    </li></ul>
+    </div>
+    <div class="a4"> 
+        <h1>&nbsp</h1>  
+        <hr size="1px" noshade="noshade" color="red"/><br>
+        <ul id="az"><li>
+        <a href="https://www.xuexi.cn/xxqg.html?id=48cf0875b3bc4f82b33ccb0f0f2d160e" target="_blank"style="color: black;">天津市委主要负责同志职务调整陈敏儿兼...</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=7038440945957239835&item_id=7038440945957239835" target="_blank"style="color: black;">胡春华会见乌兹别克斯坦总理阿里波夫</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=4224344618676661873&item_id=4224344618676661873" target="_blank"style="color: black;">重庆市委主要负责同志职务调整袁家军兼...</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=3664293001381777658&item_id=3664293001381777658" target="_blank"style="color: black;">学习贯彻党的十二大精神中央宣讲团宣讲...</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=12256222986624789263&item_id=12256222986624789263" target="_blank"style="color: black;">国办发布关于2023年部分节假日安排的通知</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=17212541556271590635&item_id=17212541556271590635" target="_blank"style="color: black;">国务院联防联控机制公布新冠居家治疗指南</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=10315356298562572070&item_id=10315356298562572070" target="_blank"style="color: black;">截至12月9日24时新冠肺炎疫情最新情况</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=5583547744193372055&item_id=5583547744193372055" target="_blank"style="color: black;">最高法颁布涉英烈权益保护十大经典案例</a><br><br>
+    </li></ul>
+    </div>
+    <div class="a5">
+        <h1>学习时评</h1>  
+        <hr size="1px" noshade="noshade" color="red"/><br>
+        <ul id="az"><li>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=7190757645404291610&item_id=7190757645404291610" target="_blank"style="color: black;">提高防护意识 垒高防护屏障</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=14232681284761352815&item_id=14232681284761352815" target="_blank"style="color: black;">求是网评论员：新征程，再出发</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=18178074954181273555&item_id=18178074954181273555" target="_blank"style="color: black;">密切党同人民群众的血肉联系</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=10631563002916913093&item_id=10631563002916913093" target="_blank"style="color: black;">求是网评论员：非凡成就 伟大变革</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=1800381201493379016&item_id=1800381201493379016" target="_blank"style="color: black;">长期有效的铁规矩硬杠杠</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=17496848977041054578&item_id=17496848977041054578" target="_blank"style="color: black;">新华时评：携手努力开启全球生物多样性治...</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=15599079670101180144&item_id=15599079670101180144" target="_blank"style="color: black;">推动构建中阿命运共同体迈出坚实步伐</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=18439576523503305234&item_id=18439576523503305234" target="_blank"style="color: black;">深耕文化土壤，助力文创升级</a><br><br>
+    </li></ul>
+    </div>
+    <div class="a6">
+        <h1>综合新闻</h1>  
+        <hr size="1px" noshade="noshade" color="red"/><br>
+        <ul id="az"><li>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=4725735920721885266&item_id=4725735920721885266" target="_blank"style="color: black;">新时代新伟业|用好乡村特色资源 发...</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=15106551876408512885&item_id=15106551876408512885" target="_blank"style="color: black;">咬定青山不放松 留得清气满乾坤——写在中...</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=7986614877349143384&item_id=7986614877349143384" target="_blank"style="color: black;">国务院联防联控机制印发新冠病毒抗原检测...</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=3915498988708513346&item_id=3915498988708513346" target="_blank"style="color: black;">工业软件保持高速增长 成为我国经济增长和...</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=10595364490631394958&item_id=10595364490631394958" target="_blank"style="color: black;">各地各部门深入开展“宪法宣传周”宣传活动</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=8460043242896622524&item_id=8460043242896622524" target="_blank"style="color: black;">我国成功发射高分五号01A卫星</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=15603863236314415721&item_id=15603863236314415721" target="_blank"style="color: black;">2022中国-阿拉伯媒体合作论坛在沙特举行</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=6300454153101988439&item_id=6300454153101988439" target="_blank"style="color: black;">俄称打击火箭弹仓库 乌称击落俄方无人机</a><br><br>
+    </li></ul>
+    </div>
+    <div class="a7">
+        <h1>中宣部发布</h1>  
+        <hr size="1px" noshade="noshade" color="red"/><br>
+        <ul id="az"><li>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=11114169070895739056&item_id=11114169070895739056" target="_blank"style="color: black;">李书磊：以史为鉴 察往知来 增强实现中华...</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=3748643370289973839&item_id=3748643370289973839" target="_blank"style="color: black;">中宣部授予陆军工程大学"星火"理论宣讲服...</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=1457160672917725356&item_id=1457160672917725356" target="_blank"style="color: black;">中越主题出版交流合作工作会议举行</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=17175866550489316292&item_id=17175866550489316292" target="_blank"style="color: black;">“核心价值观百场讲坛”第116场“云宣讲...</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=4436336840156826111&item_id=4436336840156826111" target="_blank"style="color: black;">中国思想政治工作研究会章程</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=13327068174784500331&item_id=13327068174784500331" target="_blank"style="color: black;">中国思想政治工作研究会第十届会长、常务...</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=12669669139551093190&item_id=12669669139551093190" target="_blank"style="color: black;">中也签署经典著作互译出版备忘录 促进两国...</a><br><br>
+        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=17973590501563668488&item_id=17973590501563668488" target="_blank"style="color: black;">关于第十六届精神文明建设“五个一工程”...</a><br><br>
+    </li></ul>
+    </div>
+    <div class="a8">
+        <map name="3myMap">
+        <area shape="rect" coords="0,500,2000,0" href="https://www.xuexi.cn/9bdf36a9660ca4fcd4cb6f15fbb12680/4a2b358398aa5d5f88293749baa4c505.html" /> <map>
+        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fnpc.people.com.cn%2FNMediaFile%2F2014%2F1203%2FMAIN201412031106371094478287808.JPG&refer=http%3A%2F%2Fnpc.people.com.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1673320027&t=dd4669e548514695df48c538cefce9b0" usemap="#4myMap" border="0" style="width:100%;height:200px;">
+    </div>
+    <div class="a9">
+        <map name="4myMap">
+        <area shape="rect" coords="0,500,2000,0" href="https://www.xuexi.cn/9bc28239c691139fe0bdbd0f38126f8c/9a3668c13f6e303932b5e0e100fc248b.html" /> <map>
+        <img src="https://t10.baidu.com/it/u=373921219,159785545&fm=30&app=106&f=JPEG?w=466&h=562&s=73DF7E961893E1F3481BDEBC0300A02B" usemap="#3myMap" border="0" style="width:100%;height:170px;">
+    </div>
+    <div class="a10">
+        <map name="5myMap">
+        <area shape="rect" coords="0,500,2000,0" href="https://www.xuexi.cn/db30203b53baae523b23ca9583a33612/db93dd803f9534aa6609cc91fa3fba9b.html" /> <map>
+        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.czhuihao.cn%2Fuploadfile%2F2020%2F0701%2F20200701033457310.png&refer=http%3A%2F%2Fwww.czhuihao.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1673320551&t=8f2312e48e4aa401ab92cc37dfb71d06" usemap="#5myMap" border="0" style="width:100%;height:170px;">
+    </div>
+    <div class="a11">
+        <map name="11myMap">
+        <area shape="rect" coords="0,500,2000,0" href="https://www.xuexi.cn/xxqg.html?id=4am4gi118kir4am4gi118kir4am4gi118kir" /> <map>
+        <img src="https://boot-img.xuexi.cn/lego/image/2248_5uM2qXBTo/faa7117cd1fa46589d97e55ad07c3af9.jpg" usemap="#11myMap" border="0" style="width:100%;height:200px;">
+    </div>
+    <div class="a12">
+        <map name="12myMap">
+        <area shape="rect" coords="0,500,2000,0" href="https://gonggao.xuexi.cn/" /> <map>
+        <img src="https://boot-img.xuexi.cn/lego/image/3172_71534e05f/419baa27ffe24bb68240d60f6f34f7a2.jpg" usemap="#12myMap" border="0" style="width:105%;height:100px;">
+    </div>
+    <div class="a13">
+        <map name="13myMap">
+        <area shape="rect" coords="0,500,2000,0" href="https://www.xuexi.cn/xxqg.html?id=87ad7909b88d4d9893b9dea4dd1e08f0" /> <map>
+        <img src="https://boot-img.xuexi.cn/lego/image/3172_71534e05f/9faccb0988fb4d61bf2e4864cbb9345c.jpg" usemap="#13myMap" border="0" style="width:105%;height:100px;">
+    </div>
+
+
+
+	<div class="box">
+		<ul>
+<li>&nbsp</li>
+                <li><a href="#">教育新闻</a>
+                    <ul class="box2" >
+                        <li><a href="https://www.pku.edu.cn/about.html">中国戏曲</a></li>
+                        <li><a href="https://www.pku.edu.cn/leaders.html">健康知识</a></li>
+                        <li><a href="https://www.pku.edu.cn/old_secretary.html">历任领导</a></li>
+                        <li><a href="https://www.pku.edu.cn/group.html">组织机构</a></li>
+                        <li><a href="https://www.pku.edu.cn/historyFamous.html">历史名人</a></li>
+						<li><a href="https://xxgk.pku.edu.cn/">信息公开</a></li>
+						<li><a href="https://www.pku.edu.cn/IdentificationSystem.html">标识系统</a></li>
+                    </ul>
+                
+                </li>
+            
+                     
+         
+                
+                <li><a href="#">思政与教育</a>
+                    <ul class="box2">
+                        <li><a href="https://www.pku.edu.cn/recruit.html#undergraduate">本科生</a></li>
+                        <li><a href="https://www.pku.edu.cn/recruit.html#graduateStudent">研究生</a></li>
+                        <li><a href="https://www.pku.edu.cn/recruit.html#overseasStudent">留学生</a></li>
+                        <li><a href="https://www.oce.pku.edu.cn/cms/">继续教育</a></li>
+						<li><a href="https://www.pku.edu.cn/recruit.html#summer">暑期学校</a></li>
+                    </ul>
+                </li>
+               
+                    
+                
+                   
+                
+                <li><a href="#">校园风采  </a>
+                    <ul class="box2">
+                        <li><a href="https://www.pku.edu.cn/department.html#item1">理学部</a></li>
+                        <li><a href="https://www.pku.edu.cn/department.html#item3">人文学部</a></li>
+						<li><a href="https://www.pku.edu.cn/department.html">医学部</a></li>
+						<li><a href="https://www.pku.edu.cn/department.html">跨学科类</a></li>
+						<li><a href="https://www.pku.edu.cn/department.html"></a></li>
+                    </ul> 
+                
+                </li>
+                  
+                  
+              
+                <li><a hrf="#">教师</a>
+                    <ul class="box2">
+                        <li><a href="#">师资队伍</a></li>
+                        <li><a href="#">管理部门</a></li>
+                        <li><a href="#">课程设置</a></li>
+                        <li><a href="#">海外学习</a></li>
+                        <li><a href="#">课表查询</a></li>
+						<li><a href="#">华文慕课</a></li>
+						<li><a href="#">教学网</a></li>
+						<li><a href="#">证书验证</a></li>
+						<li><a href="#">燕云直播</a></li>
+                    </ul> 
+                </li>
+                  
+                    
+                 
+                
+                <li><a href="#">青春之歌 </a>
+                    <ul class="box2">
+                        <li><a href="#">科研成果</a></li>
+                        <li><a href="#">研究机构</a></li>
+                        <li><a href="#">学术期刊</a></li>
+                        <li><a href="#">管理部门</a></li>
+                    </ul>
+                </li>
+                 
+                  
+               
+                <li><a href="#">大课堂 </a>
+                    <ul class="box2">
+                        <li><a href="#">国际合作</a></li>
+                        <li><a href="#">国内合作</a></li>
+                        <li><a href="#">教育基金会</a></li>
+                        <li><a href="#">港澳台交流</a></li>
+                        <li><a href="#">北京论坛</a></li>
+						<li><a href="#">孔子学院</a></li>
+                    </ul>  
+                </li>
+
+				<li><a href="#">练习题</a>
+                    <ul class="box2" >
+                        <li><a href="#">语文</a></li>
+                        <li><a href="#">数学</a></li>
+                        <li><a href="#">英语</a></li>
+                        <li><a href="#">历史</a></li>
+                        <li><a href="#">地理</a></li>
+						<li><a href="#">政治</a></li>
+						<li><a href="#">物理</a></li>
+						<li><a href="#">化学</a></li>
+                    </ul>
+                
+                </li>
+               
+            </ul>
+        </div>
+
+        <div class="a14">  
+            <hr size="1px" noshade="noshade" color=""/>
+            <map name="14myMap">
+                <area shape="rect" coords="0,500,2000,0" href="http://bszs.conac.cn/sitename?method=show&id=7CA3343B3491BC2DE05310291AAC35E2" /> <map>
+                <center><img src="https://dcs.conac.cn/image/blue.png" usemap="#14myMap" border="0" style="width:6%;height:90px;"></center>
+            <p><center>服务电话：12361　值班电话：010-55624303、010-55624311</center></p>
+            <p><center>中共中央宣传部宣传舆情研究中心版权所有　未经书面授权禁止使用</center></p>
+            <p><center>Copyright© 2018-2022 by www.xuexi.cn. all rights reserved</center></p>
+            <p><center>ICP备案/许可证编号：京ICP备18000311号-1 京公网安备11010102006000号</center></p>
+            <p><font color="#E0E0E0"><center>字体支持：北京北大方正电子有限公司　北京汉仪科印信息技术有限公司　北京华康信息技术有限公司</center></font></p>
+        </li></ul>
+        </div>
+        <div class="a15">
+            <map name="15myMap">
+            <area shape="rect" coords="0,500,2000,0" href="https://www.xuexi.cn/xxqg.html?id=87ad7909b88d4d9893b9dea4dd1e08f0" /> <map>
+            <img src="https://bootcdn.xuexi.cn/18600410326/bd19863611993ad460d1c23fa910fc00.png" usemap="#15myMap" border="0" style="width:15%;height:100px;">
+            <hr size="2px" noshade="noshade" color="black"/>
+        </div>
+
+
+        <div class="b">
+            <ul>
+                <li><img src="https://boot-img.xuexi.cn/image/1004/process/919b40ae5e9f419491514b3dca59746f.jpg" ></li>
+                <li><img src="https://boot-img.xuexi.cn/image/1004/process/1a16880a0958466e9f92ca724e92b0ad.jpg" ></li>
+                <li><img src="https://boot-img.xuexi.cn/image/1005/process/d20372c65ace4b01ba655ed6d8bf571f.jpg" ></li>
+                <li><img src="https://boot-img.xuexi.cn/image/1005/process/ac223b0c37dd4354aae064f474794051.jpg" ></li>
+            </ul>
+        </div>
+
+        <div class="a18">
+            <img src="https://bootcdn.xuexi.cn/18600410326/69830c9e173b5374aa9b6de43a912e4d.png" style="">
+            <img src="https://bootcdn.xuexi.cn/18600410326/0458c43bba70d60ca77d6f158835dd6c.png" style="">
+            <img src="https://bootcdn.xuexi.cn/18600410326/1398b93f1f4273536e56e8899ad46d17.png" style="">
+            <img src="https://bootcdn.xuexi.cn/18600410326/963274d57bd3c27e3c262984887c9e48.png" style="">
+            <img src="https://bootcdn.xuexi.cn/18600410326/91dc753476aa7e6f9733c3c32e501e8d.png" style="">
+            <img src="https://bootcdn.xuexi.cn/18600410326/ffeb83a388fbfcee9b5305246a3b5120.png" style="">
+            <img src="https://boot-img.xuexi.cn/lego/image/1584_qiangjun-xingjun-imgs/ddeb776982314f93a8e2807c5d9aec51.png" style="">
+            <img src="https://boot-img.xuexi.cn/lego/image/1584_qiangjun-xingjun-imgs/5d22017cd0694a31abe51fe98ea5ac3b.png" style="">
+            <img src="https://bootcdn.xuexi.cn/18600410326/396e765bf7a1d46a020557e75ab0b1e8.png" style="">
+        </div>
+</body>
+</html>
